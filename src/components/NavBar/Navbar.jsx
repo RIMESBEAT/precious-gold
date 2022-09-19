@@ -6,10 +6,15 @@ import { faXmark, faBars, faCartPlus } from "@fortawesome/free-solid-svg-icons";
 import { Outlet, Link } from "react-router-dom";
 import { useContext } from "react";
 import { UserContext } from "../../UserContext/UserContext";
+import { signOutUser } from "../../util/firebase.util";
 
 function Navbar() {
-  const { currentUser } = useContext(UserContext);
-  console.log(currentUser);
+  const { currentUser, setCurrentUser } = useContext(UserContext);
+
+  const signOutHandler = async () => {
+    await signOutUser();
+    setCurrentUser(null);
+  };
 
   const openNavBtn = document.querySelector(".open__nav");
   const closeNavBtn = document.querySelector(".close__nav");
@@ -70,11 +75,15 @@ function Navbar() {
                   <li className="links">
                     <Link to="/contact">Contact</Link>
                   </li>
-                  <li className="links">
-                    <Link to="/auth" className="btn account__btn">
+                  {currentUser ? (
+                    <span className="links" onClick={signOutHandler}>
+                      Sign Out
+                    </span>
+                  ) : (
+                    <Link to="/auth" className="links">
                       Sign In
                     </Link>
-                  </li>
+                  )}
                   <li className="links">
                     <Link to="/cart">
                       <div className="cart__box">

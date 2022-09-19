@@ -33,6 +33,7 @@
 }
 .links{
     margin:0 .6rem;
+    color: var(--white);
 }
 .links a{
     color: var(--white);

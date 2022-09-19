@@ -6,14 +6,9 @@ import {
   signInWithRedirect,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  signOut,
 } from "firebase/auth";
-import {
-  getFirestore,
-  getDoc,
-  setDoc,
-  doc,
-  Firestore,
-} from "firebase/firestore";
+import { getFirestore, getDoc, setDoc, doc } from "firebase/firestore";
 const firebaseConfig = {
   apiKey: "AIzaSyAiAI89VGQ3LXqg5gK6b6TGyjHBPcMfSps",
   authDomain: "preciousgold-74828.firebaseapp.com",
@@ -79,3 +74,5 @@ export const signInAuthserWithEmailAndPassword = async (email, password) => {
   if (!email || !password) return;
   return await signInWithEmailAndPassword(auth, email, password);
 };
+
+export const signOutUser = async () => await signOut(auth);
