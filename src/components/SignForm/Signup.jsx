@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { UserContext } from "../../UserContext/UserContext";
 import {
   createAuthserWithEmailAndPassword,
   createUserDocumentFromAuth,
@@ -14,6 +15,7 @@ const Signup = () => {
   const [formFields, setFormFiels] = useState(defaultFormFields);
   const { displayName, email, password, confirmPassword } = formFields;
   console.log(formFields);
+  const { setCurrentUser } = useState(UserContext);
   const handleChange = (event) => {
     const { name, value } = event.target;
     setFormFiels({ ...formFields, [name]: value });
@@ -30,21 +32,28 @@ const Signup = () => {
     }
     try {
       const { user } = await createAuthserWithEmailAndPassword(email, password);
+
+      setCurrentUser(user);
       await createUserDocumentFromAuth(user, { displayName });
       resetFormFields();
     } catch (error) {
-      console.log("user creation encounter an error", error);
+      if (error.code === "auth/email-already-in=use") {
+        alert("Cannot create User, email already in use");
+      } else {
+        console.log("user creation encounter an error", error);
+      }
     }
   };
   return (
-    <div>
+    <div className="form-input-container">
+      <h2 className="form__header">No Account Yet? Register Here</h2>
       <form onSubmit={handleSubmit}>
         <FormInput
+          value={displayName}
           label="Display Name"
           type="text"
           name="displayName"
           onChange={handleChange}
-          value={displayName}
           required
         />
         <FormInput
@@ -71,7 +80,9 @@ const Signup = () => {
           value={confirmPassword}
           required
         />
-        <button type="submit">Submit</button>
+        <button className="btn sign__btn" type="submit">
+          Submit
+        </button>
       </form>
     </div>
   );

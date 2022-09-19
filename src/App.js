@@ -7,12 +7,11 @@ import Navbar from "./components/NavBar/Navbar";
 import Uploads from "./components/Uploads/Uploads";
 import Cart from "./components/Cart/Cart";
 import Contact from "./components/Contact/Contact";
-import SignIn from "./components/Sign/SignIn";
 import Footer from "./components/Footer/Footer";
 import FullDesign from "./components/Designs/FullDesign";
+import Authentication from "./components/Authentication/Authentication";
 
 function App() {
-
   return (
     <Routes>
       <Route path="/" element={<Navbar />}>
@@ -21,7 +20,7 @@ function App() {
         <Route path="uploads" element={<Uploads />} />
         <Route path="contact" element={<Contact />} />
         <Route path="cart" element={<Cart />} />
-        <Route path="accounts" element={<SignIn />} />
+        <Route path="auth" element={<Authentication />} />
         <Route path="/" element={<Footer />} />
       </Route>
     </Routes>

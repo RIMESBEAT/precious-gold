@@ -2,6 +2,9 @@ import React from "react";
 import "./FormInput.css";
 function FormInput({ label, ...otherProps }) {
   return (
+    <div className="group__container">
+
+    
     <div className="group">
       <input className="form-input" {...otherProps} />
       {label && (
@@ -13,6 +16,7 @@ function FormInput({ label, ...otherProps }) {
           {label}
         </label>
       )}
+    </div>
     </div>
   );
 }

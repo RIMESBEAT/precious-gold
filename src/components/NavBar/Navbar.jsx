@@ -1,12 +1,16 @@
 import React, { Fragment } from "react";
 import "./Navbar.css";
 import "../MediaScreen/MediaScreen.css";
-// import "../../components/MediaScreen/MediaScreen.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark, faBars, faCartPlus } from "@fortawesome/free-solid-svg-icons";
 import { Outlet, Link } from "react-router-dom";
+import { useContext } from "react";
+import { UserContext } from "../../UserContext/UserContext";
 
-function Navbar({ setShow }) {
+function Navbar() {
+  const { currentUser } = useContext(UserContext);
+  console.log(currentUser);
+
   const openNavBtn = document.querySelector(".open__nav");
   const closeNavBtn = document.querySelector(".close__nav");
   const navItems = document.querySelector(".list__items");
@@ -65,6 +69,11 @@ function Navbar({ setShow }) {
                   </li>
                   <li className="links">
                     <Link to="/contact">Contact</Link>
+                  </li>
+                  <li className="links">
+                    <Link to="/auth" className="btn account__btn">
+                      Sign In
+                    </Link>
                   </li>
                   <li className="links">
                     <Link to="/cart">

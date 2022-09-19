@@ -1,20 +1,23 @@
 
-  .group {
+.group {
 	 position: relative;
-	 margin: 45px 0;
+	 width: 100%;
+	 margin-bottom: 1rem;
 }
  .group .form-input {
 	 background: none;
-	 background-color: white;
-	 color: grey;
+	 background-color: var(--green);
+	 color: var(--white);
 	 font-size: 18px;
 	 padding: 10px 10px 10px 5px;
-	 display: block;
+	 display: flex;
 	 width: 100%;
 	 border: none;
-	 border-radius: 0;
+	 border-radius: 6px;
+	 border-bottom: 2px solid var(--gold);
 
-	 margin: 25px 0;
+
+	 
 }
  .group .form-input:focus {
 	 outline: none;
@@ -22,13 +25,13 @@
  .group .form-input:focus ~ .form-input-label {
 	 top: -14px;
 	 font-size: 12px;
-
+	 color: var(--gold);
 }
  .group input[type='password'] {
 	 letter-spacing: 0.3em;
 }
  .group .form-input-label {
-	 color: grey;
+	 color: var(--white);
 	 font-size: 16px;
 	 font-weight: normal;
 	 position: absolute;
@@ -37,10 +40,9 @@
 	 top: 10px;
 	 transition: 300ms ease all;
 }
-.shrink {
+ .group .form-input-label.shrink {
 	 top: -14px;
 	 font-size: 12px;
-
+	 color: black;
 }
-
  

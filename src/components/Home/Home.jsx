@@ -1,7 +1,5 @@
 import React from 'react'
 import Designs from '../Designs/Designs'
-import FullDesign from '../Designs/FullDesign'
-import SignIn from '../Sign/SignIn'
 // import CreateFullCard from '../Designs/CreateFullCard'
 import './Home.css'
 function Home() {
@@ -21,8 +19,6 @@ function Home() {
         </div>
           </section>
       <Designs />
-      <SignIn/>
-      <FullDesign />
       </div>
   )
 }

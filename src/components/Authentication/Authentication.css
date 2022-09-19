@@ -1,0 +1,21 @@
+.form__container{
+    padding: 6rem 4rem;
+    width: 100%;
+   
+
+}
+.sign__form{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    justify-content: space-between;
+    border-radius: 6px;
+    width: 100%;
+     background: rgba(139, 138, 138, 0.466);
+}
+
+
+@media(max-width:700px){
+    .form__container{
+        padding:4rem 1rem;
+    }
+}

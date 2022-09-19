@@ -1,0 +1,27 @@
+.form-input-container{
+    align-items: center;
+    justify-content: center;
+    padding: 1.2rem;
+}
+.form__header{
+    margin: 2rem 0;
+    font-size: 1rem;
+    color: var(--white);
+}
+.sign__btn{
+    background: var(--gold);
+    border: none;
+    padding: .8rem 2rem;
+    margin-right:1rem ;
+    color: var(--white);
+    font-weight: bold;
+}
+.btn__form__box{
+    display: flex;
+    color: var(--white);
+}
+.google__btn{
+    background: rgba(26, 201, 26, 0.842);
+    border: none;
+    color: var(--white);
+}
