@@ -37,13 +37,26 @@
 }
 .links a{
     color: var(--white);
+    transition: var(--text-transition);
+    position:relative
 }
+.links a:hover,
 .links a.active{
     color: var(--gold);
 }
+.links a:hover::after,
+.links a.active::after{
+    content:'';
+    position: absolute;
+    width: 70%;
+    height: 5px;
+    background: var(--gold);
+    bottom: -5px;
+    left: 0;
+}
+
 .socials{
     font-size: 1.5rem;
-    margin-right: 1.5rem;
     display: none;
     color: var(--white);
 }
@@ -57,19 +70,11 @@
     background: transparent;
     border-color: var(--gold);  
     display: none;
-   
- 
+
 }
-.close__nav{
-    animation: rotate;
-    animation-duration: .5s;
-}
-.open__nav{
-    animation: flyIn;
-    animation-duration: .5s;
-}
+
 @media(max-width:800px){
-     .overlay{
+     .overlay.active{
         display: block;
      }
          .nav__btn{
@@ -78,8 +83,6 @@
     }
     .sm-hidden{
         display: none;
-     
-        transition: .5s all ease-in-out ;
     }
     .container{
         padding: .6rem 2rem;
@@ -90,20 +93,40 @@
     position: absolute;
     z-index: 4;
     top: 2.5rem;
-    right: 0;
+    right: -500px;
     background: var(--dark-green);
-    width: 70%;
-       animation: transformAnimation;
-        animation-duration: .5s;
-        animation-iteration-count: 1;
+    width: 60%;
+    transition: var(--text-transition);
 
+    }
+    .list__items.active{
+        right: 0;
     }
     .nav__links{
         flex-direction: column;
         gap: 2rem;
+        align-items: flex-start;
+        margin-left: 2rem;
+        margin-top: 30%;
         
     }
     .socials{
-        display: block;
+        display: flex;
+        gap: 1.5rem;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+    }
+    .fa-instagram{
+        color: red;
+    }
+    .fa-tiktok{
+        color: black;
+    }
+    .fa-facebook{
+        color: rgb(4, 40, 196);
+    }
+    .fa-whatsapp{
+        color: rgb(4, 196, 68);
     }
 }

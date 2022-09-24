@@ -12,6 +12,7 @@ function FullDesign() {
             product.map(({ imgUrl, id, title, description }) => {
               return (
                 <div className="card__box" key={id}>
+                  
                   <div className="card">
                     <img src={imgUrl} alt="" className="card__img" />
                     <h3 className="card__head">{title}</h3>
@@ -23,7 +24,26 @@ function FullDesign() {
             })}
         </div>
       </section>
+  {/* const openCardView = (e) => {
+    e.preventDefault();
+    setCardViewIsActive(!cardViewIsActive);
+    setSelectedIndex(+e.currentTarget.dataset.index])
+  };
+....
 
+{images.map((image, index) => (
+    <button onClick={openCardView} data-index={index}>
+      <div className="grid-item">
+        <h1 className="title-with-grid">{image.title}</h1>
+        <img
+          className="grid-item picture-img"
+          data-aos={randChoice(animations)}
+          src={image.image}
+          alt="nature1"
+        />
+      </div>
+    </button>
+))} */}
       <Outlet />
     </div>
   );

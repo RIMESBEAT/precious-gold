@@ -8,6 +8,8 @@
     --orange:#D9580D;
     --yellow:#F2A413;
     --white:#fff;
+
+    --text-transition: .3s ease-in-out
 }
 
 *{
@@ -29,7 +31,7 @@ body{
 }
     .overlay{
     backdrop-filter: blur(3px);
-    position: absolute;
+    position: fixed;
     height: 100vh;
     width: 400vw;
     top: 0;
