@@ -25,10 +25,7 @@ function Navbar() {
             <div className="nav__container container">
               <Link to="/" className="logo__box">
                 <img src={Logo} alt="" className="logo" />
-                <div
-                  className="nav__btn mobile"
-                  onClick={() => setNavShow(!navShow)}
-                >
+                <div className="nav__btn " onClick={() => setNavShow(!navShow)}>
                   {navShow ? (
                     <FontAwesomeIcon icon={faXmark} />
                   ) : (
@@ -55,8 +52,7 @@ function Navbar() {
                   {currentUser ? (
                     <li className="links">
                       <span className="links" onClick={signOutUser}>
-                        {""}
-                        Sign Out{""}
+                        Sign Out
                       </span>
                     </li>
                   ) : (
@@ -67,13 +63,13 @@ function Navbar() {
                     </li>
                   )}
 
-                  <li className="links">
+                  <li className="">
                     <Link to="/cart">
                       <div className="cart__box">
                         <span>
-                          <FontAwesomeIcon icon={faCartPlus} />
+                          <FontAwesomeIcon className="cart__icon" icon={faCartPlus} />
                         </span>
-                        <span>0</span>
+                        <span className="cart__number">10</span>
                       </div>
                     </Link>
                   </li>
