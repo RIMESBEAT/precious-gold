@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { Outlet } from "react-router-dom";
 import ProductCard from "../ProductCard/ProductCard";
-import { ProductsContext } from "../ProductContext/ProductContext";
+import { ProductsContext } from "../../Context/ProductContext/ProductContext";
 
 function FullDesign() {
   const { products } = useContext(ProductsContext);

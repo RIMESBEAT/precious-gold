@@ -15,7 +15,7 @@ function Home() {
             <a href="/" className="btn hero__btn"  >Here</a>
         </div>
         <div className="particles"></div>
-        <div className="waves"></div>
+        {/* <div className="waves"></div> */}
         </div>
           </section>
       <Designs />

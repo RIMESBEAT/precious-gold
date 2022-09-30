@@ -1,17 +1,20 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useContext, useState } from "react";
 import "./Navbar.css";
-import "../MediaScreen/MediaScreen.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faXmark, faBars, faCartPlus } from "@fortawesome/free-solid-svg-icons";
+import { faXmark, faBars } from "@fortawesome/free-solid-svg-icons";
 import { Outlet, Link } from "react-router-dom";
-import { useContext } from "react";
-import { UserContext } from "../../UserContext/UserContext";
 import { signOutUser } from "../../util/firebase.util";
-import { useState } from "react";
-import Logo from "../../assets/logo.svg";
+import CartIcon from "../CartIcon/CartIcon";
+import CartDropDown from "../CartDropDown/CartDropDown";
+import { UserContext } from "../../Context/UserContext/UserContext";
+import { CartContext } from "../../Context/CartContext/CartConntext";
 function Navbar() {
   const { currentUser } = useContext(UserContext);
+  const { isCartOpen, setIsCartOpen } = useContext(CartContext);
   const [navShow, setNavShow] = useState(false);
+
+  const navBarToggleHandler = () => setNavShow(!navShow);
+  const cartToggleHandler = () => setIsCartOpen(!isCartOpen);
 
   const links = document.querySelectorAll(".links");
 
@@ -24,8 +27,11 @@ function Navbar() {
           <nav id="nav">
             <div className="nav__container container">
               <Link to="/" className="logo__box">
-                <img src={Logo} alt="" className="logo" />
-                <div className="nav__btn " onClick={() => setNavShow(!navShow)}>
+                <h4 className="logo">
+                  {" "}
+                  Precious <span>Gold</span>
+                </h4>
+                <div className="nav__btn " onClick={navBarToggleHandler}>
                   {navShow ? (
                     <FontAwesomeIcon icon={faXmark} />
                   ) : (
@@ -63,16 +69,7 @@ function Navbar() {
                     </li>
                   )}
 
-                  <li className="">
-                    <Link to="/cart">
-                      <div className="cart__box">
-                        <span>
-                          <FontAwesomeIcon className="cart__icon" icon={faCartPlus} />
-                        </span>
-                        <span className="cart__number">10</span>
-                      </div>
-                    </Link>
-                  </li>
+                  <CartIcon />
                   <div className="socials">
                     <Link
                       to="https://web.whatsapp.com"
@@ -107,9 +104,14 @@ function Navbar() {
                 </ul>
               </div>
             </div>
+            {isCartOpen && <CartDropDown />}
+            <span
+              className={isCartOpen ? "overlay    active" : "overlay"}
+              onClick={cartToggleHandler}
+            ></span>
             <div
               className={navShow ? "overlay active" : "overlay"}
-              onClick={() => setNavShow(!navShow)}
+              onClick={navBarToggleHandler}
             ></div>
           </nav>
         </header>

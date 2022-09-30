@@ -86,7 +86,7 @@ function SignIn() {
             type="button"
             onClick={signInWithGoogle}
           >
-            {"Google "}
+            <i class="fa-brands fa-google-play"></i> {"Google "}
           </button>
         </div>
       </form>

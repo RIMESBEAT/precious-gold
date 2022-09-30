@@ -1,19 +1,25 @@
 import React from "react";
-import "../ProductCard/ProductCard.css";
+import { useContext } from "react";
+import { CartContext } from "../../Context/CartContext/CartConntext";
+import "./ProductCard.css";
 function ProductCard({ product }) {
-  const { imgUrl, id, title, price } = product;
+  const { imgUrl, name, price } = product;
+  const { addItemToCart } = useContext(CartContext);
+  const addProductToCart = () => addItemToCart(product);
   return (
     <div>
-      <section id=" ">
-        <div className="card " key={id}>
-          <img src={imgUrl} alt="" className="card__img" />
-          <h3 className="card__head">{title}</h3>
-          <p className="card__price">N{price}</p>
-          <button type="button" className="btn buy__btn">
-            Add to Cart
-          </button>
-        </div>
-      </section>
+      <div className="card ">
+        <img src={imgUrl} alt={`${name}`} className="card__img" />
+        <h3 className="card__head">{name}</h3>
+        <p className="card__price">N{price}</p>
+        <button
+          type="button"
+          className="btn buy__btn"
+          onClick={addProductToCart}
+        >
+          Add to Cart
+        </button>
+      </div>
     </div>
   );
 }

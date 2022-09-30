@@ -74,7 +74,7 @@
 }
 .cart__icon{
     font-size: 1.9rem;
-    color: var(--yellow);
+    color: var(--gold);
 }
 .cart__box{
     position: relative;
@@ -93,6 +93,9 @@
     font-size: 13px;
     font-weight: bolder;
 
+}
+.cart__overlay{
+    z-index: 7;
 }
 @media(max-width:800px){
      .overlay.active{
@@ -113,7 +116,7 @@
     height: 100vh;
     position: absolute;
     z-index: 4;
-    top: 2.5rem;
+    top: 2rem;
     right: -500px;
     background: var(--dark-green);
     width: 60%;
