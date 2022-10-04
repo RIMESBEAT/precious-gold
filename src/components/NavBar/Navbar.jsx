@@ -7,7 +7,7 @@ import { signOutUser } from "../../util/firebase.util";
 import CartIcon from "../CartIcon/CartIcon";
 import CartDropDown from "../CartDropDown/CartDropDown";
 import { UserContext } from "../../Context/UserContext/UserContext";
-import { CartContext } from "../../Context/CartContext/CartConntext";
+import { CartContext } from "../../Context/CartContext/CartContext";
 function Navbar() {
   const { currentUser } = useContext(UserContext);
   const { isCartOpen, setIsCartOpen } = useContext(CartContext);
@@ -28,7 +28,6 @@ function Navbar() {
             <div className="nav__container container">
               <Link to="/" className="logo__box">
                 <h4 className="logo">
-                  {" "}
                   Precious <span>Gold</span>
                 </h4>
                 <div className="nav__btn " onClick={navBarToggleHandler}>

@@ -10,6 +10,7 @@ import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
 import FullDesign from "./components/Designs/FullDesign";
 import Authentication from "./components/Authentication/Authentication";
+import CheckOut from "./components/CheckOut/CheckOut";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="contact" element={<Contact />} />
         <Route path="cart" element={<Cart />} />
         <Route path="auth" element={<Authentication />} />
+        <Route path="/checkout" element={<CheckOut/>}/>
         <Route path="/" element={<Footer />} />
       </Route>
     </Routes>
