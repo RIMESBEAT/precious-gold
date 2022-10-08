@@ -46,7 +46,7 @@ function Navbar() {
                     </Link>
                   </li>
                   <li className="links">
-                    <Link to="/designs">Designs</Link>
+                    <Link to="/shop">Designs</Link>
                   </li>
                   <li className="links">
                     <Link to="/uploads">Uploads</Link>

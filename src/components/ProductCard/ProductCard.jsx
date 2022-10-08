@@ -3,13 +3,13 @@ import { useContext } from "react";
 import { CartContext } from "../../Context/CartContext/CartContext";
 import "./ProductCard.css";
 function ProductCard({ product }) {
-  const { imgUrl, name, price } = product;
+  const { imageUrl, name, price } = product;
   const { addItemToCart } = useContext(CartContext);
   const addProductToCart = () => addItemToCart(product);
   return (
     <div>
       <div className="card ">
-        <img src={imgUrl} alt={`${name}`} className="card__img" />
+        <img src={imageUrl} alt={`${name}`} className="card__img" />
         <h3 className="card__head">{name}</h3>
         <p className="card__price">N{price}</p>
         <button

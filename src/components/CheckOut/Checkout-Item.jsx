@@ -6,7 +6,7 @@ import "./Checkout-Item.css";
 function CheckoutItem({ cartItem }) {
   const { addItemToCart, subItemFromCart, clearItemFromCart } =
     useContext(CartContext);
-  const { id, imgUrl, name, quantity, price } = cartItem;
+  const { id, imageUrl, name, quantity, price } = cartItem;
 
   const clearItemHandler = () => clearItemFromCart(cartItem);
   const subItemFromCartHandler = () => subItemFromCart(cartItem);
@@ -16,7 +16,7 @@ function CheckoutItem({ cartItem }) {
     <div className="checkout__container" hey={id}>
       <div className="checkout__content">
         <div className="checkout__img__container">
-          <img src={imgUrl} alt={`${name}`} className="checkout__img" />
+          <img src={imageUrl} alt={`${name}`} className="checkout__img" />
         </div>
         <div className="checkout__details">
           <div className="checkout__name__box checkout__gap">

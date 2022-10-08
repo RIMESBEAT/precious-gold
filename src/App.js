@@ -8,22 +8,22 @@ import Uploads from "./components/Uploads/Uploads";
 import Cart from "./components/Cart/Cart";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
-import FullDesign from "./components/Designs/FullDesign";
 import Authentication from "./components/Authentication/Authentication";
 import CheckOut from "./components/CheckOut/CheckOut";
+import Shop from "./components/Shop/Shop";
 
 function App() {
   return (
     <Routes>
       <Route path="/" element={<Navbar />}>
         <Route index element={<Home />} />
-        <Route path="designs" element={<FullDesign />} />
+        <Route path="shop/*" element={<Shop />} />
         <Route path="uploads" element={<Uploads />} />
         <Route path="contact" element={<Contact />} />
         <Route path="cart" element={<Cart />} />
         <Route path="auth" element={<Authentication />} />
-        <Route path="/checkout" element={<CheckOut/>}/>
-        <Route path="/" element={<Footer />} />
+        <Route path="checkout" element={<CheckOut />} />
+        <Route index element={<Footer />} />
       </Route>
     </Routes>
   );
