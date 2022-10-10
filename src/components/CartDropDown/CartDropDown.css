@@ -1,14 +1,14 @@
 .cart-dropdown-container {
   position: fixed;
-  width: 240px;
+  width: 260px;
   height: 340px;
   display: flex;
   flex-direction: column;
   padding: 20px;
-  border: 1px solid var(--dark-green);
+  border: 1px solid var(--gold);
   border-radius: 6px;
   background-color: var(--white);
-  top: 60px;
+  top: 38px;
   right: 40px;
   z-index: 9;
 
@@ -30,4 +30,5 @@
     font-weight: bold;
     background: var(--green);
     color: var(--white);
+    text-align: center;
  }

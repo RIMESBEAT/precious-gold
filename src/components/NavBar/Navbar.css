@@ -97,6 +97,15 @@
 .cart__overlay{
     z-index: 7;
 }
+
+
+.cart__icon__sm{
+    position: absolute;
+    right: 3rem;
+    top: -3px;
+    display: none;
+}
+
 @media(max-width:800px){
      .overlay.active{
         display: block;
@@ -152,5 +161,11 @@
     }
     .fa-whatsapp{
         color: rgb(4, 196, 68);
+    }
+    .cart__icon__bg{
+    display: none;
+    }
+    .cart__icon__sm{
+    display: block;
     }
 }

@@ -37,6 +37,9 @@ function Navbar() {
                     <FontAwesomeIcon icon={faBars} />
                   )}
                 </div>
+                <div className="cart__icon__sm">
+                  <CartIcon />
+                </div>
               </Link>
               <div className={navShow ? "list__items active" : "list__items "}>
                 <ul className="nav__links">
@@ -99,7 +102,9 @@ function Navbar() {
                       <i className="fa-brands fa-instagram"></i>
                     </Link>
                   </div>
-                  <CartIcon />
+                  <div className="cart__icon__bg">
+                    <CartIcon />
+                  </div>
                 </ul>
               </div>
             </div>
