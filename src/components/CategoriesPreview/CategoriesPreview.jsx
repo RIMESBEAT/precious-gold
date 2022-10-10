@@ -16,7 +16,7 @@ function CategoriesPreview() {
         );
       })}
     </div>
-  );
+  ); 
 }
 
 export default CategoriesPreview;

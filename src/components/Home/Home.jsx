@@ -1,5 +1,5 @@
 import React from 'react'
-import Shop from "../Shop/Shop";
+import Directory from "../Directory/Directory";
 import "./Home.css";
 function Home() {
   return (
@@ -21,7 +21,7 @@ function Home() {
           {/* <div className="waves"></div> */}
         </div>
       </section>
-      <Shop />
+      <Directory />
     </div>
   );
 }
