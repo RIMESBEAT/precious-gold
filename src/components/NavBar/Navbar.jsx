@@ -68,7 +68,6 @@ function Navbar() {
                     </li>
                   )}
 
-                  <CartIcon />
                   <div className="socials">
                     <Link
                       to="https://web.whatsapp.com"
@@ -100,10 +99,12 @@ function Navbar() {
                       <i className="fa-brands fa-instagram"></i>
                     </Link>
                   </div>
+                  <CartIcon />
                 </ul>
               </div>
             </div>
             {isCartOpen && <CartDropDown />}
+
             <span
               className={isCartOpen ? "overlay    active" : "overlay"}
               onClick={cartToggleHandler}
