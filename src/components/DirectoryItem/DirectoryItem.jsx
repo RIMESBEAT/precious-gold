@@ -8,13 +8,15 @@ function DirectoryItem({ category }) {
 
   const onDirectoryHandler = () => navigate(route);
   return (
-    <div>
-      <div className="" onClick={onDirectoryHandler}>
-        <img src={imageUrl} alt={`${title}`} />
-        <div className="directory__content">
-          <h2>{title}</h2>
-          <p>Shop Now</p>
-        </div>
+    <div className="directory__item__container" onClick={onDirectoryHandler}>
+      <div
+        className="background-image"
+        style={{ backgroundImage: `url(${imageUrl})` }}
+      />
+
+      <div className="directory-text-container">
+        <h2>{title}</h2>
+        <p>Shop Now</p>
       </div>
     </div>
   );

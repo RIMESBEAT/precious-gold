@@ -1,7 +1,6 @@
-.directory__item__container{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 2fr));
-
-
-
+.directory__container{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
