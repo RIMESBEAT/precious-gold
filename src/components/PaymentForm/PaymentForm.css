@@ -1,0 +1,12 @@
+.payment__container{
+    height: 300px;
+    display: flex;
+    border: 2px solid rebeccapurple;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.payment_form{
+    height: 100px;
+    min-width: 30%;
+}

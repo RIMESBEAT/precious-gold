@@ -1,3 +1,4 @@
+import { Button } from "@nextui-org/react";
 import React from "react";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
@@ -14,13 +15,11 @@ function CartDropDown() {
           <CartItem key={item.id} cartItem={item} />
         ))}
       </div>
-      <Link
-        to="/checkout"
-        className="btn account__btn cart__drop__btn"
+      <Button
         onClick={toggleIsCartOpen}
       >
         Check Out
-      </Link>
+      </Button>
     </div>
   );
 }
