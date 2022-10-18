@@ -16,6 +16,7 @@ function Category({title}) {
     <>
       <h2>{ title}</h2>
       <div className=" category__grid__box">
+        
         {products &&
           products.map((product) => (
             <ProductCard key={product.id} product={product} />

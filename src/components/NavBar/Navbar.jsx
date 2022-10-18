@@ -52,9 +52,6 @@ function Navbar() {
                     <Link to="/shop">Designs</Link>
                   </li>
                   <li className="links">
-                    <Link to="/uploads">Uploads</Link>
-                  </li>
-                  <li className="links">
                     <Link to="/contact">Contact</Link>
                   </li>
                   {currentUser ? (

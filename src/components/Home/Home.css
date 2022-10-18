@@ -2,7 +2,7 @@
 .hero{
     width: 100%;
     height: 80vh;
-    background-image:linear-gradient(rgba(156, 76, 0, 0.877), rgba(0, 31, 13, 0.87)), url('./../../assets/hero1.jpg');
+    background-image:linear-gradient(rgba(204, 202, 199, 0.37), rgba(5, 14, 8, 0.678)), url('https://cdn.wallpapersafari.com/81/47/tRwleT.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center; 
@@ -61,7 +61,7 @@
     z-index: 2;
 
 }
-.waves{
+/* .waves{
     position: absolute;
     bottom: -4rem;
     right: 0;
@@ -71,8 +71,8 @@
     background-position: bottom;
     background-repeat: repeat-x;
     
-}
-.particles{
+} */
+/* .particles{
     position: absolute;
     top: -1.5rem;
     right: 0;
@@ -87,4 +87,25 @@
     mix-blend-mode:screen;
     z-index: 0;
     
+} */
+.home__btn__flex{
+    margin: auto;
+}
+.splited__hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem;
+    width: 100%;
+    
+}
+.splited_1{
+    flex-wrap: wrap;
+    width: 100%;
+     display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.splited_1 img{
+width: 50%;
 }

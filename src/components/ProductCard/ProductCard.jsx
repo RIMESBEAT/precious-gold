@@ -8,7 +8,10 @@ function ProductCard({ product }) {
   const { addItemToCart } = useContext(CartContext);
   const addProductToCart = () => addItemToCart(product);
   return (
+    <>
+    
     <Card css={{ w: "100%", h: "400px" }}>
+      
       <Card.Header
         css={{
           position: "absolute",
@@ -22,7 +25,7 @@ function ProductCard({ product }) {
           <Text size={12} weight="bold" transform="uppercase" color="red">
             New
           </Text>
-          <Text h3 color="#D9580D">
+          <Text h3 color="white">
             {name}
           </Text>
         </Col>
@@ -57,7 +60,7 @@ function ProductCard({ product }) {
           </Col>
           <Col>
             <Row justify="flex-end">
-              <Button flat auto rounded color="Warning">
+              <Button flat auto rounded color="secondary">
                 <Text
                   css={{ color: "orange" }}
                   size={12}
@@ -73,6 +76,7 @@ function ProductCard({ product }) {
         </Row>
       </Card.Footer>
     </Card>
+    </>
   );
 }
 
