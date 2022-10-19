@@ -1,10 +1,10 @@
 import { Button } from "@nextui-org/react";
 import React from "react";
-import CollapsItem from "../CollapsItem/ColllapsItem";
 import Directory from "../Directory/Directory";
 import "./Home.css";
-import FuckYou from "../../assets/bead-2.jpg";
-import SliderSm from "../SliderSm/SliderSm";
+import Sliderbox from "../Slider/Sliderbox";
+import CategoriesPreview from "../CategoriesPreview/CategoriesPreview";
+import Testimonials from "../Testimonials/Testimonials";
 function Home() {
   return (
     <div>
@@ -29,21 +29,15 @@ function Home() {
           {/* <div className="waves"></div> */}
         </div>
       </section>
-      <SliderSm />
+
       <section>
+        <br />
+        <Sliderbox />
         <Directory />
         <br />
-        <section>
-          <div className="splited__hero">
-            <div className="splited_1">
-              <img src={FuckYou} alt="" />
-              <img src={FuckYou} alt="" />
-            </div>
-            <div className="splited_2">
-              <CollapsItem />
-            </div>
-          </div>
-        </section>
+        <Sliderbox />
+        <br />
+        <Testimonials />
       </section>
     </div>
   );

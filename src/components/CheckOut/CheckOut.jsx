@@ -3,6 +3,7 @@ import "./CheckOut.css";
 import { CartContext } from "../../Context/CartContext/CartContext";
 import CheckoutItem from "./Checkout-Item";
 import PaymentForm from "../PaymentForm/PaymentForm";
+import Paystack from "../Paystack/Paystack";
 function CheckOut() {
   const { cartItems, cartTotal } = useContext(CartContext);
   return (
@@ -15,7 +16,7 @@ function CheckOut() {
         
       </div>
       
-      <PaymentForm/>
+      <Paystack/>
     </div>
   );
 }

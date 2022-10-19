@@ -1,10 +1,8 @@
-import "./components/Animations/Animations.css";
-import "./components/MediaScreen/MediaScreen.css";
+
 import "./App.css";
 import Home from "./components/Home/Home";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/NavBar/Navbar";
-import Uploads from "./components/Uploads/Uploads";
 import Cart from "./components/Cart/Cart";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
@@ -18,7 +16,6 @@ function App() {
       <Route path="/" element={<Navbar />}>
         <Route index element={<Home />} />
         <Route path="shop/*" element={<Shop />} />
-        <Route path="uploads" element={<Uploads />} />
         <Route path="contact" element={<Contact />} />
         <Route path="cart" element={<Cart />} />
         <Route path="auth" element={<Authentication />} />

@@ -1,0 +1,31 @@
+.testimonial{
+    background: var(--white);
+    background-image: url('https://particles.js.org/images/background1.jpg');
+}
+.testimonial__grid{
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+   
+}
+.testimonial h2{
+    text-align: center;
+    padding: 4rem;
+    text-transform:uppercase;
+}
+.testimonial__content{
+  display: flex;
+  border: 2px solid red;
+  align-items: center;
+  justify-content: right;
+  width: 30%;
+
+}
+
+.testimonial__center{
+    margin:6px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 36px;
+}
