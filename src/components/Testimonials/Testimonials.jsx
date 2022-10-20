@@ -56,13 +56,13 @@ function Testimonials() {
         <div className="testimonial__center ">
           <Slider {...settings}>
             <Card
-              css={{ p: "$2", mw: "100%" }}
+              css={{ p: "$2", mw: "100%", bg: "$blue" }}
               className="testimonial__center "
             >
               <Card.Header>
                 <User
-                  src="https://i.pravatar.cc/150?u=a042581f4e29026704d"
-                  name="Ariana Wattson"
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWUK7wcgzeCENqRhHb-KG8qf-nh16XlQHi2g&usqp=CAU"
+                  name="Juliana Rimes"
                   description="UI/UX Designer @Github"
                   size="xl"
                 />
@@ -75,11 +75,11 @@ function Testimonials() {
                 </Text>
               </Card.Body>
             </Card>
-            <Card css={{ p: "$2", mw: "100%" }}>
+            <Card css={{ p: "$2", mw: "100%", bg: "$success" }}>
               <Card.Header>
                 <User
-                  src="https://i.pravatar.cc/150?u=a042581f4e29026704d"
-                  name="Ariana Wattson"
+                  src="https://i.pinimg.com/736x/b6/79/5e/b6795ecb7c933cdad10ceda3e10131e4.jpg"
+                  name="Rejoice Rimesking"
                   description="UI/UX Designer @Github"
                   size="xl"
                 />
@@ -92,17 +92,20 @@ function Testimonials() {
                 </Text>
               </Card.Body>
             </Card>
-            <Card css={{ p: "$2", mw: "100%" }}>
+            <Card
+              css={{ p: "$2", mw: "100%", bg: "$warning" }}
+              className="orange"
+            >
               <Card.Header>
                 <User
-                  src="https://i.pravatar.cc/150?u=a042581f4e29026704d"
-                  name="Ariana Wattson"
+                  src="https://img.freepik.com/free-photo/portrait-beautiful-black-woman-using-white-towel-her-face_23-2149095680.jpg?w=2000"
+                  name="Lovet Francisca"
                   description="UI/UX Designer @Github"
                   size="xl"
                 />
               </Card.Header>
               <Card.Body css={{ py: "$2" }}>
-                <Text>
+                <Text css={{ py: "$2", color: "$white" }}>
                   Make beautiful websites regardless of your design experience.
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
                   voluptatum porro provident reiciendis debitis.
