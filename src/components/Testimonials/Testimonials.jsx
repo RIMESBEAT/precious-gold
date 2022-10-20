@@ -32,8 +32,8 @@ function Testimonials() {
         breakpoint: 600,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 2,
-          initialSlide: 2,
+          slidesToScroll: 1,
+          initialSlide: 1,
         },
       },
       {
@@ -55,7 +55,10 @@ function Testimonials() {
         </div>
         <div className="testimonial__center ">
           <Slider {...settings}>
-            <Card css={{ p: "$2", mw: "50%" }} className="testimonial__center ">
+            <Card
+              css={{ p: "$2", mw: "100%" }}
+              className="testimonial__center "
+            >
               <Card.Header>
                 <User
                   src="https://i.pravatar.cc/150?u=a042581f4e29026704d"
@@ -72,7 +75,7 @@ function Testimonials() {
                 </Text>
               </Card.Body>
             </Card>
-            <Card css={{ p: "$2", mw: "50%" }}>
+            <Card css={{ p: "$2", mw: "100%" }}>
               <Card.Header>
                 <User
                   src="https://i.pravatar.cc/150?u=a042581f4e29026704d"
@@ -89,7 +92,7 @@ function Testimonials() {
                 </Text>
               </Card.Body>
             </Card>
-            <Card css={{ p: "$2", mw: "50%" }}>
+            <Card css={{ p: "$2", mw: "100%" }}>
               <Card.Header>
                 <User
                   src="https://i.pravatar.cc/150?u=a042581f4e29026704d"

@@ -22,10 +22,9 @@
 }
 
 .testimonial__center{
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+   width: 90%;
     overflow: hidden;
-    padding: 36px;
+    margin: auto;
+
+    
 }
