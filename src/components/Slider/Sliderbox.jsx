@@ -44,7 +44,7 @@ function Sliderbox() {
   };
   return (
     <div>
-      <div>
+      <div className="overflow">
         <Slider {...settings}>
           <div className="carousel__img__box">
             <img

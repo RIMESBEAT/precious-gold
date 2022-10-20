@@ -18,6 +18,7 @@ function Testimonials() {
     slidesToScroll: 1,
     autoplay: true,
     autoplayspeed: 2000,
+    className: "center",
     responsive: [
       {
         breakpoint: 1024,
@@ -52,9 +53,9 @@ function Testimonials() {
         <div className="testimonial__text">
           <h2>Lorem ipsum dolor sit amet consectetur.</h2>
         </div>
-        <div className="testimonial__center" style={{width:600}}>
-          <Slider {...settings} className="testimonial">
-            <Card css={{ p: "$6", mw: "400px" }}>
+        <div className="testimonial__center ">
+          <Slider {...settings}>
+            <Card css={{ p: "$2", mw: "50%" }} className="testimonial__center ">
               <Card.Header>
                 <User
                   src="https://i.pravatar.cc/150?u=a042581f4e29026704d"
@@ -71,7 +72,7 @@ function Testimonials() {
                 </Text>
               </Card.Body>
             </Card>
-            <Card css={{ p: "$6", mw: "400px" }}>
+            <Card css={{ p: "$2", mw: "50%" }}>
               <Card.Header>
                 <User
                   src="https://i.pravatar.cc/150?u=a042581f4e29026704d"
@@ -88,7 +89,7 @@ function Testimonials() {
                 </Text>
               </Card.Body>
             </Card>
-            <Card css={{ p: "$6", mw: "400px" }}>
+            <Card css={{ p: "$2", mw: "50%" }}>
               <Card.Header>
                 <User
                   src="https://i.pravatar.cc/150?u=a042581f4e29026704d"
