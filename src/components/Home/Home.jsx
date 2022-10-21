@@ -3,8 +3,8 @@ import React from "react";
 import Directory from "../Directory/Directory";
 import "./Home.css";
 import Sliderbox from "../Slider/Sliderbox";
-import CategoriesPreview from "../CategoriesPreview/CategoriesPreview";
 import Testimonials from "../Testimonials/Testimonials";
+import ContactUs from "../ContactUs/ContactUs";
 function Home() {
   return (
     <div>
@@ -38,6 +38,8 @@ function Home() {
         <Sliderbox />
         <br />
         <Testimonials />
+        <br />
+        <ContactUs />
       </section>
     </div>
   );

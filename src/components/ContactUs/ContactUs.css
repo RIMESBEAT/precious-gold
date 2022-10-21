@@ -1,0 +1,22 @@
+.container__contact{
+    padding: 4rem;
+    background: var(--green);
+    width: 100%;
+    height: 100%;
+}
+
+
+.social__icons__contact{
+    padding: 2rem;
+    display: flex;
+    font-size: 1rem;
+    gap: 2rem;
+}
+
+.Contact__info{
+    background: var(--orange);
+}
+.contact__msg{
+    background: var(--white);
+    width: 100%;
+}

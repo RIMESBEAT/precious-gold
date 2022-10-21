@@ -1,16 +1,21 @@
 .testimonial{
     background: var(--white);
-    background-image: url('https://particles.js.org/images/background1.jpg');
+    background-image: linear-gradient(rgba(255, 249, 249, 0.911), rgba(255, 253, 253, 0.863)) , url('https://img.freepik.com/premium-vector/colorful-confetti-flying-randomly-abstract-background-with-explosion-particles_103588-297.jpg?w=2000');
+    padding: 4rem 0;
+    
 }
 .testimonial__grid{
    display: grid;
    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+   grid-gap: 8px;
    
 }
 .testimonial h2{
     text-align: center;
-    padding: 4rem;
+    padding: 2rem;
     text-transform:uppercase;
+    color: var(--orange);
+   
 }
 .testimonial__content{
   display: flex;
@@ -18,6 +23,7 @@
   align-items: center;
   justify-content: right;
   width: 30%;
+  
 
 }
 
@@ -25,8 +31,13 @@
    width: 90%;
     overflow: hidden;
     margin: auto;
+    height: 100%;
 
 }
-.orange{
+.testimonial__text{
     
+background:-webkit-linear-gradient(36deg, rgba(242, 140, 15, 1) 40%, rgba(48, 132, 242, 1) 55%, rgba(2, 64, 89, 1) 75%);
+    /* background:linear-gradient(36deg, rgba(242, 140, 15, 1) 0%, rgba(48, 132, 242, 1) 39%, rgba(2, 64, 89, 1) 73%); */
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
 }
