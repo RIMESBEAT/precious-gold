@@ -1,30 +1,27 @@
 import React from "react";
+import "aos/dist/aos.css";
+
 import "./ContactUs.css";
-import { BsFacebook } from "react-icons/bs";
-import { BsInstagram } from "react-icons/bs";
-import { BsWhatsapp } from "react-icons/bs";
-import { SiTiktok } from "react-icons/si";
+
 import { Fragment } from "react";
-import { Link, Outlet } from "react-router-dom";
+
 import {
   Button,
-  Card,
-  Col,
   Grid,
   Input,
-  Row,
-  Text,
+
   Textarea,
-  User,
 } from "@nextui-org/react";
+import Socials from "../Socials/Socials";
 
 function ContactUs() {
+
   return (
     <Fragment>
       <div className="container__contact">
-        <div className="contact__content">
-          <Grid.Container gap={2} justify="center" css={{ bg: "$white" }}>
-            <Grid xs={3}>
+        <Grid.Container gap={1} justify="center" css={{ bg: "$white" }}>
+          <div className="contact__content">
+            <Grid md={8} data-aos="fade-up">
               <div className="Contact__info">
                 <h2>Contact Information</h2>
                 <p>
@@ -34,57 +31,32 @@ function ContactUs() {
                 <div className="contact__text">
                   <br />
                   <br />
+                  <br />
                   <span>
-                    <i className="fa-solid fa-phone"></i>
+                    <i className="fa-solid fa-phone contact__text__icon"></i>
                     +234 8163537324
                   </span>
-                  <br />
-                  <br />
+
                   <span>
-                    <i className="fa-solid fa-message"></i>
+                    <i className="fa-solid fa-message contact__text__icon"></i>
                     elijahisaiah44@gmail.com
                   </span>
-                  <br />
-                  <br />
-                  <span>
-                    <i className="fa-solid fa-location-dot"></i>
+
+                  <span className="">
+                    <i className="fa-solid fa-location-dot contact__text__icon "></i>
                     10 Bella Shmurda Street
                   </span>
                 </div>
-                <div className="social__icons__contact">
-                  <Link
-                    className="facebook"
-                    target="_blank"
-                    to="\www.facebook.com"
-                  >
-                    <BsFacebook />
-                  </Link>
-                  <Link
-                    className="instagram"
-                    target="_blank"
-                    to="\www.facebook.com"
-                  >
-                    <BsInstagram />
-                  </Link>
-                  <Link
-                    className="whatsapp"
-                    target="_blank"
-                    to="\wa.me/message/5ZGJK5PBFOMRH1"
-                  >
-                    <BsWhatsapp />
-                  </Link>
-                  <Link
-                    className="tiktok"
-                    target="_blank"
-                    to="\tiktok.com/@rimesbeat"
-                  >
-                    <SiTiktok />
-                  </Link>
-                </div>
+                <Socials />
               </div>
             </Grid>
-            <Grid xs={6}>
+            <Grid
+              ms={12}
+              css={{ position: "relative", zIndex: "0" }}
+              data-aos="slide-up"
+            >
               <div className="contact__msg">
+                <br />
                 <br />
                 <br />
                 <Input
@@ -136,16 +108,16 @@ function ContactUs() {
                 <br />
                 <br />
                 <br />
-
-                <Button type="submit" css={{ bg: "#D9580D", ai: "center" }}>
-                  Submit
-                </Button>
+                <div className="contact__btn">
+                  <Button type="submit" css={{ bg: "#D9580D", ai: "center" }}>
+                    Submit
+                  </Button>
+                </div>
               </div>
             </Grid>
-          </Grid.Container>
-        </div>
+          </div>
+        </Grid.Container>
       </div>
-      <Outlet />
     </Fragment>
   );
 }

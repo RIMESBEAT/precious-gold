@@ -1,10 +1,9 @@
 .container__contact{
-    padding: 4rem;
-    background: var(--green);
+    padding: 4rem 1rem;
+    background: var(--white);
     width: 100%;
     height: 100%;
 }
-
 
 .social__icons__contact{
     padding: 2rem;
@@ -14,9 +13,42 @@
 }
 
 .Contact__info{
-    background: var(--orange);
+    color: var(--white);
+    padding: 2rem;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: bottom;
+    background-image: linear-gradient(rgba(214, 137, 107, 0.911), rgb(197, 67, 7)) , url('https://i.pinimg.com/originals/b6/ee/31/b6ee31573476aa9eac295bf4bc7cb961.jpg');
+}
+.Contact__info h2{
+    padding: 2rem 0;
 }
 .contact__msg{
-    background: var(--white);
+    
     width: 100%;
+    
+}
+
+.contact__content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    width: 100%;
+}
+               
+.contact__text span{
+    line-height: 4rem;
+    display: block;
+}
+.contact__text span:hover{
+    letter-spacing: 3px;
+    transition: var(--text-transition);
+}
+
+.contact__text__icon{
+    margin-right: 1rem;
+}
+.contact__btn{
+    display: flex;
+    justify-content: right;
 }

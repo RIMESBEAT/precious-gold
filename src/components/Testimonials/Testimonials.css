@@ -35,7 +35,8 @@
 
 }
 .testimonial__text{
-    
+    font-weight: bold;
+    font-size: 1.5rem;
 background:-webkit-linear-gradient(36deg, rgba(242, 140, 15, 1) 40%, rgba(48, 132, 242, 1) 55%, rgba(2, 64, 89, 1) 75%);
     /* background:linear-gradient(36deg, rgba(242, 140, 15, 1) 0%, rgba(48, 132, 242, 1) 39%, rgba(2, 64, 89, 1) 73%); */
     -webkit-text-fill-color: transparent;

@@ -1,0 +1,27 @@
+.footer__container{
+    padding: 2rem;
+    text-align: center;
+    font-size: .8rem;
+    color: var(--white);
+}
+.footer__container h3{
+    padding: 1rem;
+}
+.footer-bottom, .footer-bottom a{
+    text-align: center;
+    color: var(--white);
+}
+.f-menu{
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    justify-content: center; 
+    gap: 1rem;
+}
+.f-menu li a{
+   color: var(--white);
+   font-size: .8rem;
+}
+.footer-menu{
+    padding: 1rem;
+}

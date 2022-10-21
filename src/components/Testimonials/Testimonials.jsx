@@ -61,7 +61,7 @@ function Testimonials() {
     throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
 
     // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
-    offset: 120, // offset (in px) from the original trigger point
+    offset: 100, // offset (in px) from the original trigger point
     delay: 0, // values from 0 to 3000, with step 50ms
     duration: 400, // values from 0 to 3000, with step 50ms
     easing: "ease", // default easing for AOS animations
@@ -87,7 +87,11 @@ function Testimonials() {
         >
           <h2>What People Say About Us</h2>
         </div>
-        <div className="testimonial__center " data-aos="slide-left">
+        <div
+          className="testimonial__center "
+          data-aos="slide-up"
+          data-aos-delay="50"
+        >
           <Slider {...settings}>
             <Card css={{ p: "$2", mw: "100%", bg: "$pink900" }}>
               <Card.Header>
