@@ -6,6 +6,7 @@ import Sliderbox from "../Slider/Sliderbox";
 import Testimonials from "../Testimonials/Testimonials";
 import ContactUs from "../ContactUs/ContactUs";
 import Footer from "../Footer/Footer";
+import NewsLetter from "../NewsLetter/NewsLetter";
 function Home() {
   return (
     <div>
@@ -42,7 +43,9 @@ function Home() {
         <br />
         <ContactUs />
         <br />
-        <Footer/>
+        <NewsLetter />
+        <br />
+        <Footer />
       </section>
     </div>
   );

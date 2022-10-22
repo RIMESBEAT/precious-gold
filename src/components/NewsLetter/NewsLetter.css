@@ -1,0 +1,24 @@
+.news__container{
+    padding: 4rem;
+    background: var(--orange);
+    color: var(--white);
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+}
+.newsletter__input{
+    padding: 4rem 0;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: center;
+}
+.subscribe{
+    color: white;
+}
