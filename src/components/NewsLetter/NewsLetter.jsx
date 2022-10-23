@@ -15,12 +15,6 @@ function NewsLetter() {
         <div class="newsletter__input">
           <Input type="text" placeholder="Name" name="name" required />
           <Input type="text" placeholder="Email address" name="mail" required />
-
-          <Checkbox
-            color="success"
-            defaultSelected={true}
-            className="subscribe"
-          />
         </div>
 
         <div class="container">
