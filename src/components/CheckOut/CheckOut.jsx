@@ -15,8 +15,7 @@ function CheckOut() {
         <span className="total">TOTAL: N{cartTotal}</span>
         
       </div>
-      
-      <Paystack/>
+    
     </div>
   );
 }
